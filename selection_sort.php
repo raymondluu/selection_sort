@@ -1,5 +1,5 @@
 <?php
-set_time_limit(60);
+set_time_limit(90);
 
 function selection_sort($arr){
 	$temp_arr = $arr;
@@ -79,17 +79,17 @@ function arr_with_10000_rand(){
 
 $start_time = microtime(true);
 
-//$my_arr = array(8, 5, 2, 6, 9, 3, 1, 4, 0, 7);
+// $my_arr = array(8, 5, 2, 6, 9, 3, 1, 4, 0, 7);
 // $my_arr2 = selection_sort($my_arr);
+// $my_arr3 = modified_selection_sort($my_arr);
 
-//$my_arr3 = arr_with_100_rand();
-//$my_arr4 = selection_sort($my_arr3);
-
-///$my_arr5 = modified_selection_sort($my_arr);
-//$my_arr6 = modified_selection_sort($my_arr3);
+// $my_arr4 = arr_with_100_rand();
+// $my_arr5 = selection_sort($my_arr4);
+// $my_arr6 = modified_selection_sort($my_arr4);
 
 $my_arr7 = arr_with_10000_rand();
-$my_arr8 = modified_selection_sort($my_arr7);
+$my_arr8 = selection_sort($my_arr7); // took 72 seconds
+// $my_arr9 = modified_selection_sort($my_arr7); //took 43 seconds
 
 $end_time = microtime(true);
 $total_time = $end_time - $start_time;
